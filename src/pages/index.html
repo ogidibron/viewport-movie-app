@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ViewPort — Discover Movies</title>
+  <meta name="description" content="Search and discover movies from around the world with ViewPort.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎬</text></svg>">
+  <link rel="stylesheet" href="../styles/main.css">
+  <script type="module" src="../js/app.js" defer></script>
+</head>
+<body>
+
+  <!-- Header / Navbar -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"></rect>
+          <line x1="7" y1="2" x2="7" y2="22"></line>
+          <line x1="17" y1="2" x2="17" y2="22"></line>
+          <line x1="2" y1="12" x2="22" y2="12"></line>
+          <line x1="2" y1="7" x2="7" y2="7"></line>
+          <line x1="2" y1="17" x2="7" y2="17"></line>
+          <line x1="17" y1="17" x2="22" y2="17"></line>
+          <line x1="17" y1="7" x2="22" y2="7"></line>
+        </svg>
+        <span>ViewPort</span>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span>&#9776;</span>
+      </button>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="articles.html">Articles</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero with embedded carousel background -->
+    <section class="hero">
+      <!-- Carousel background -->
+      <div class="hero-carousel" id="carousel" aria-label="Featured movies carousel">
+        <div class="carousel-track" id="carousel-track">
+          <!-- Slides injected by JS -->
+        </div>
+        <button class="carousel-btn prev" id="carousel-prev" aria-label="Previous slide">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+        </button>
+        <button class="carousel-btn next" id="carousel-next" aria-label="Next slide">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </button>
+        <div class="carousel-dots" id="carousel-dots"></div>
+      </div>
+
+      <!-- Hero content overlay -->
+      <div class="hero-content">
+        <div class="hero-badge">&#127909; Movie Search</div>
+        <h1>Discover Your Next<br>Favorite Film</h1>
+        <p class="hero-subtitle">Search thousands of movies, explore details, and find exactly what you want to watch tonight.</p>
+      </div>
+    </section>
+
+    <!-- Search -->
+    <section class="search-section">
+      <h2>Search Movies</h2>
+      <form class="search-form" id="search-form">
+        <input
+          type="text"
+          class="search-input"
+          id="search-input"
+          placeholder="Search for a movie..."
+          required
+          autocomplete="off"
+        >
+        <button type="submit" class="search-btn">Search</button>
+      </form>
+      <div class="search-history" id="search-history"></div>
+    </section>
+
+    <!-- Loading -->
+    <section class="loading-section" id="loading-section">
+      <div class="loading-spinner"></div>
+      <p class="loading-text">Searching movies...</p>
+    </section>
+
+    <!-- Error -->
+    <section class="error-section" id="error-section">
+      <p class="error-text" id="error-text"></p>
+    </section>
+
+    <!-- Results -->
+    <section class="results-section" id="results-section">
+      <div class="movies-container" id="movies-container"></div>
+    </section>
+
+    <!-- Pagination -->
+    <div class="pagination" id="pagination"></div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"></rect>
+          <line x1="7" y1="2" x2="7" y2="22"></line>
+          <line x1="17" y1="2" x2="17" y2="22"></line>
+          <line x1="2" y1="12" x2="22" y2="12"></line>
+          <line x1="2" y1="7" x2="7" y2="7"></line>
+          <line x1="2" y1="17" x2="7" y2="17"></line>
+          <line x1="17" y1="17" x2="22" y2="17"></line>
+          <line x1="17" y1="7" x2="22" y2="7"></line>
+        </svg>
+        ViewPort
+      </div>
+      <p class="footer-copy">&copy; 2026 ViewPort. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="articles.html">Articles</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
