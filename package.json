@@ -1,19 +1,27 @@
 {
   "name": "viewport-movie-search",
   "version": "1.0.0",
-  "description": "A movie search application using OMDB API",
+  "description": "A movie search application using OMDB API with live news feature",
   "main": "src/js/app.js",
   "scripts": {
-    "dev": "npx serve src",
+    "dev": "node server.js",
+    "serve": "npx serve src",
     "build": "npm run build:css && npm run build:js",
     "build:css": "cat src/styles/base.css src/styles/components.css src/styles/layout.css > dist/styles.css",
     "build:js": "echo 'No JS build needed - using ES modules'",
     "lint": "echo 'No linter configured'",
-    "preview": "npx serve dist"
+    "preview": "npx serve dist",
+    "start": "node server.js"
   },
-  "keywords": ["movie", "search", "omdb", "javascript"],
+  "keywords": ["movie", "search", "omdb", "news", "entertainment"],
   "author": "",
   "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "axios": "^1.6.0",
+    "dotenv": "^16.3.1"
+  },
   "devDependencies": {
     "serve": "^1.0.0"
   }
