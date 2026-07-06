@@ -1,8 +1,6 @@
 /* ViewPort — Professional Movie Search */
 
-/* ============================================
-   DESIGN TOKENS
-   ============================================ */
+/* DESIGN TOKENS */
 :root {
   --bg-deep: #0b0c10;
   --bg-surface: #1f2833;
@@ -26,9 +24,7 @@
   --header-height: 64px;
 }
 
-/* ============================================
-   RESET & BASE
-   ============================================ */
+/*  RESET & BASE */
 *, *::before, *::after {
   margin: 0;
   padding: 0;
@@ -70,9 +66,7 @@ button, input, textarea {
   color: inherit;
 }
 
-/* ============================================
-   HEADER / NAVBAR
-   ============================================ */
+/*  HEADER / NAVBAR */
 .site-header {
   position: sticky;
   top: 0;
